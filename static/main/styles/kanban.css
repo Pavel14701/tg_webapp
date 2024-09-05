@@ -75,10 +75,3 @@ button[type="add_task"]:hover {
     background-color: #4ce91c;
 }
 
-/* Стили для элементов Kanban */
-.kanban-row {
-    display: flex;
-    flex-direction: row;
-    overflow-x: auto;
-    gap: 20px;
-}

@@ -1,0 +1,47 @@
+.kanban-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.kanban-row-wrapper {
+    overflow: hidden; /* Скрывает элементы, выходящие за пределы контейнера */
+    width: 80%; /* Устанавливает ширину контейнера */
+}
+
+.kanban-row {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    transition: transform 0.3s ease; /* Плавная анимация прокрутки */
+}
+
+.kanban-item {
+    min-width: 200px; /* Устанавливает минимальную ширину элемента */
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px 0;
+    color: white;
+    text-align: center;
+}
+
+.scroll-button {
+    background-color: #6a11cb;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.scroll-button.left {
+    left: 0;
+}
+
+.scroll-button.right {
+    right: 0;
+}

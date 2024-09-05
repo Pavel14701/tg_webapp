@@ -2,9 +2,9 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="{{ url_for('static', filename='main/style.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='main/kanban.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='main/kanban-items.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='main/styles/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='main/styles/kanban.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='main/styles/kanban-items.css') }}">
 </head>
 <body>
     <header>
@@ -24,20 +24,26 @@
                 <li><h2>To Do</h2></li>
                 <li><ul class="priority-check">
                     <li><h2>Priority</h2></li>
-                    <li><button class="circle"><img src="{{ url_for('static', filename='main/circle_no.svg') }}" alt="normal-priority"></button></li>
-                    <li><button class="circle"><img src="{{ url_for('static', filename='main/circle_low.svg') }}" alt="normal-priority"></button></li>
-                    <li><button class="circle"><img src="{{ url_for('static', filename='main/circle_normal.svg') }}" alt="elevated-priority"></button></li>
-                    <li><button class="circle"><img src="{{ url_for('static', filename='main/circle_high.svg') }}" alt="highest-priority"></button></li>
+                    <li><button class="circle"><img src="{{ url_for('static', filename='main/img/circle_no.svg') }}" alt="normal-priority"></button></li>
+                    <li><button class="circle"><img src="{{ url_for('static', filename='main/img/circle_low.svg') }}" alt="normal-priority"></button></li>
+                    <li><button class="circle"><img src="{{ url_for('static', filename='main/img/circle_normal.svg') }}" alt="elevated-priority"></button></li>
+                    <li><button class="circle"><img src="{{ url_for('static', filename='main/img/circle_high.svg') }}" alt="highest-priority"></button></li>
                 </ul></li>
                 <li><button type="add_task">Add Task</button></li>
             </ul>
-            
-            <div class="kanban-row">
-                <div class="kanban-item">Task 1</div>
-                <div class="kanban-item">Task 2</div>
-                <div class="kanban-item">Task 3</div>
-                <div class="kanban-item">Task 4</div>
-                <div class="kanban-item">Task 5</div>
+            <div class="kanban-container">
+                <button class="scroll-button left">&lt;</button>
+                <div class="kanban-row-wrapper">
+                    <div class="kanban-row">
+                        <div class="kanban-item">Item 1</div>
+                        <div class="kanban-item">Item 2</div>
+                        <div class="kanban-item">Item 3</div>
+                        <div class="kanban-item">Item 4</div>
+                        <div class="kanban-item">Item 5</div>
+                        <!-- Добавьте больше элементов по необходимости -->
+                    </div>
+                </div>
+                <button class="scroll-button right">&gt;</button>
             </div>
         </div>
         <div class="kanban-column">
@@ -45,56 +51,79 @@
                 <li><h2>In Progress</h2></li>
                 <li><ul class="priority-check">
                     <li><h2>Priority</h2></li>
-                    <li><button class="circle"><img src="{{ url_for('static', filename='main/circle_no.svg') }}" alt="normal-priority"></button></li>
-                    <li><button class="circle"><img src="{{ url_for('static', filename='main/circle_low.svg') }}" alt="normal-priority"></button></li>
-                    <li><button class="circle"><img src="{{ url_for('static', filename='main/circle_normal.svg') }}" alt="elevated-priority"></button></li>
-                    <li><button class="circle"><img src="{{ url_for('static', filename='main/circle_high.svg') }}" alt="highest-priority"></button></li>
+                    <li><button class="circle"><img src="{{ url_for('static', filename='main/img/circle_no.svg') }}" alt="normal-priority"></button></li>
+                    <li><button class="circle"><img src="{{ url_for('static', filename='main/img/circle_low.svg') }}" alt="normal-priority"></button></li>
+                    <li><button class="circle"><img src="{{ url_for('static', filename='main/img/circle_normal.svg') }}" alt="elevated-priority"></button></li>
+                    <li><button class="circle"><img src="{{ url_for('static', filename='main/img/circle_high.svg') }}" alt="highest-priority"></button></li>
                 </ul></li>
                 <li><button type="add_task">Add Task</button></li>
                 </ul>
-            <div class="kanban-row">
-                <div class="kanban-item">Task 1</div>
-                <div class="kanban-item">Task 2</div>
-                <div class="kanban-item">Task 3</div>
-                <div class="kanban-item">Task 4</div>
-                <div class="kanban-item">Task 5</div>
-            </div>
+                <div class="kanban-container">
+                    <button class="scroll-button left">&lt;</button>
+                    <div class="kanban-row-wrapper">
+                        <div class="kanban-row">
+                            <div class="kanban-item">Item 1</div>
+                            <div class="kanban-item">Item 2</div>
+                            <div class="kanban-item">Item 3</div>
+                            <div class="kanban-item">Item 4</div>
+                            <div class="kanban-item">Item 5</div>
+                            <!-- Добавьте больше элементов по необходимости -->
+                        </div>
+                    </div>
+                    <button class="scroll-button right">&gt;</button>
+                </div>
         </div>
         <div class="kanban-column">
             <ul class="">
                 <li><ul class="priority-check">
                 <li><ul>
                     <li><h2>Priority</h2></li>
-                    <li><button class="circle"><img src="{{ url_for('static', filename='main/circle_no.svg') }}" alt="normal-priority"></button></li>
-                    <li><button class="circle"><img src="{{ url_for('static', filename='main/circle_low.svg') }}" alt="normal-priority"></button></li>
-                    <li><button class="circle"><img src="{{ url_for('static', filename='main/circle_normal.svg') }}" alt="elevated-priority"></button></li>
-                    <li><button class="circle"><img src="{{ url_for('static', filename='main/circle_high.svg') }}" alt="highest-priority"></button></li>
+                    <li><button class="circle"><img src="{{ url_for('static', filename='main/img/circle_no.svg') }}" alt="normal-priority"></button></li>
+                    <li><button class="circle"><img src="{{ url_for('static', filename='main/img/circle_low.svg') }}" alt="normal-priority"></button></li>
+                    <li><button class="circle"><img src="{{ url_for('static', filename='main/img/circle_normal.svg') }}" alt="elevated-priority"></button></li>
+                    <li><button class="circle"><img src="{{ url_for('static', filename='main/img/circle_high.svg') }}" alt="highest-priority"></button></li>
                 </ul></li>
                 <li><button type="add_task">Add Task</button></li>
             </ul>
-            <div class="kanban-row">
-                <div class="kanban-item">Task 1</div>
-                <div class="kanban-item">Task 2</div>
-                <div class="kanban-item">Task 3</div>
-                <div class="kanban-item">Task 4</div>
-                <div class="kanban-item">Task 5</div>
+            <div class="kanban-container">
+                <button class="scroll-button left">&lt;</button>
+                <div class="kanban-row-wrapper">
+                    <div class="kanban-row">
+                        <div class="kanban-item">Item 1</div>
+                        <div class="kanban-item">Item 2</div>
+                        <div class="kanban-item">Item 3</div>
+                        <div class="kanban-item">Item 4</div>
+                        <div class="kanban-item">Item 5</div>
+                        <!-- Добавьте больше элементов по необходимости -->
+                    </div>
+                </div>
+                <button class="scroll-button right">&gt;</button>
             </div>
         </div>
         <div class="kanban-column">
             <ul class="">
                 <li><h2>Done</h2></li>
             </ul>
-            <div class="kanban-row">
-                <div class="kanban-item">Task 1</div>
-                <div class="kanban-item">Task 2</div>
-                <div class="kanban-item">Task 3</div>
-                <div class="kanban-item">Task 4</div>
-                <div class="kanban-item">Task 5</div>
+            <div class="kanban-container">
+                <button class="scroll-button left">&lt;</button>
+                <div class="kanban-row-wrapper">
+                    <div class="kanban-row">
+                        <div class="kanban-item">Item 1</div>
+                        <div class="kanban-item">Item 2</div>
+                        <div class="kanban-item">Item 3</div>
+                        <div class="kanban-item">Item 4</div>
+                        <div class="kanban-item">Item 5</div>
+                        <!-- Добавьте больше элементов по необходимости -->
+                    </div>
+                </div>
+                <button class="scroll-button right">&gt;</button>
             </div>
         </div>
     </div>
 
     <canvas id="stars"></canvas>
-    <script src="{{ url_for('static', filename='main/stars.js') }}" type="text/javascript"></script>
+    <script src="{{ url_for('static', filename='main/js/stars.js') }}" type="text/javascript"></script>
+    <script src="{{ url_for('static', filename='main/js/kanban-items-scroll.js') }}" type="text/javascript"></script>
+    <script src="{{ url_for('static', filename='main/js/kanban-background-scroll.js') }}" type="text/javascript"></script>
 </body>
 </html>
